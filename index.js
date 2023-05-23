@@ -25,7 +25,9 @@ app.use(cors({
   credentials: true,
   origin: process.env.ORIGIN,
 }));
-
+app.get("/",(req,res)=>{
+  res.send("welcome")
+})
 async function getUserDataFromRequest(req) {
   return new Promise((resolve, reject) => {
     const token = req.cookies?.token;
