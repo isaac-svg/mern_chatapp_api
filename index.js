@@ -25,11 +25,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: "https://pingpong-eight.vercel.app/",
+  origin: "https://pingpong-eight.vercel.app",
 }));
 app.get("/",(req,res)=>{
   res.send("welcome")
 })
+
 async function getUserDataFromRequest(req) {
   return new Promise((resolve, reject) => {
     const token = req.cookies?.token;
