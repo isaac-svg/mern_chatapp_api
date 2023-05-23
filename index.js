@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: process.env.ORIGIN,
+  origin: "https://pingpong-eight.vercel.app/",
 }));
 app.get("/",(req,res)=>{
   res.send("welcome")
