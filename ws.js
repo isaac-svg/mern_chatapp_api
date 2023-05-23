@@ -1,4 +1,5 @@
-
+const ws = require('ws');
+const fs = require('fs');
 
 const WEBSOCKETSERVER = (server)=>{
     const wss = new ws.WebSocketServer({server});
