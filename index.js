@@ -13,8 +13,8 @@ const { WEBSOCKETSERVER } = require('./ws');
 
 
 dotenv.config();
-mongoose.connect(process.env.MONGO_URL, (err) => {
-  if (err) throw err;
+mongoose.connect(process.env.MONGO_URL,{
+  useNewUrlParser:true,useUnifiedTopology:true
 });
 const jwtSecret = process.env.JWT_SECRET;
 const bcryptSalt = bcrypt.genSaltSync(10);
